@@ -83,7 +83,7 @@ router.get("/view/:id",(req,res) => {
 // Transfer
 router.post('/transfer',(req,res) => {
     const {SenderID, SenderName,SenderEmail, reciverName, reciverEmail,transferAmount} = req.body;
-    console.log(transferAmount)
+    
     const history = new historyModel({
         sName: SenderName,
         sEmail: SenderEmail,
