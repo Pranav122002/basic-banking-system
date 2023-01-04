@@ -71,7 +71,7 @@ router.get("/view/:id",(req,res) => {
                     throw err;
                 }
                 else{
-                    res.render('view',{title: 'view', data: uData, records: rData})
+                    res.render('view',{title: 'View', data: uData, records: rData})
 
                 }
             })
@@ -106,7 +106,7 @@ router.post('/transfer',(req,res) => {
             senderData.forEach( async (c) => {
                 if(c.name === reciverName || c.email === reciverEmail || c.amount < transferAmount){
                     
-                    res.render('sucess',{title: "sucess", value:"", msg: "", errmsg: "Process Not Complete due to incorrect reciver details!"});
+                    res.render('sucess',{title: "Success", value:"", msg: "", errmsg: "Process Not Complete due to incorrect reciver details!"});
                 }
                
                 else{
@@ -123,7 +123,7 @@ router.post('/transfer',(req,res) => {
                 })
                 }
 
-                res.render('sucess',{title: "sucess", value:"True", msg: "Transfer Sucessfull"})
+                res.render('sucess',{title: "Success", value:"True", msg: "Transfer Successfull"})
             });
          
         }).catch((err)=>{
