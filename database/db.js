@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-
+const DB_URI = process.env.MongoDB_URI;
 const conn = ()=>{
-    mongoose.connect("mongodb+srv://Patil122002:FSIbcBJFpkZB0ii7@cluster0.p3ixoej.mongodb.net/bank?retryWrites=true&w=majority").then(()=> {
+    mongoose.connect(DB_URI).then(()=> {
         console.log("Database Connection Successfull ... ");
     }).catch((err) =>{
         console.log(err)
